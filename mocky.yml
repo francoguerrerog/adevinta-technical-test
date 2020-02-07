@@ -1,0 +1,13 @@
+sources:
+  include:
+    - ./adevinta-technical-test
+    - ./adevinta-technical-testTests
+templates:
+  - ./Pods/SwiftyMocky/Sources/Templates
+output:
+  ./adevinta-technical-testTests
+args:
+  testable:
+  - adevinta_technical_test
+  import:
+  - RxSwift

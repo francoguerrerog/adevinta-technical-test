@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DB0D95D23EDFC7800007BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95C23EDFC7800007BED /* AppDelegate.swift */; };
+		2DB0D95F23EDFC7800007BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */; };
+		2DB0D96123EDFC7800007BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D96023EDFC7800007BED /* ViewController.swift */; };
+		2DB0D96623EDFC7B00007BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0D96523EDFC7B00007BED /* Assets.xcassets */; };
+		2DB0D96923EDFC7B00007BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0D96723EDFC7B00007BED /* LaunchScreen.storyboard */; };
+		2DB0D97423EDFC7B00007BED /* adevinta_technical_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D97323EDFC7B00007BED /* adevinta_technical_testTests.swift */; };
+		2DB0D98323EDFD0C00007BED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D97F23EDFD0C00007BED /* MainViewController.swift */; };
+		2DB0D98423EDFD0C00007BED /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D98023EDFD0C00007BED /* MainView.swift */; };
+		2DB0D98523EDFD0C00007BED /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D98123EDFD0C00007BED /* MainViewModel.swift */; };
+		2DB0D98623EDFD0C00007BED /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0D98223EDFD0C00007BED /* MainView.xib */; };
+		2DB0D98B23EDFE0800007BED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D98A23EDFE0800007BED /* Coordinator.swift */; };
+		3B9BD34CF4092357E66D82F6 /* Pods_adevinta_technical_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D316796DC5A30656F60051 /* Pods_adevinta_technical_testTests.framework */; };
+		C7D34889A0801155C1DF6447 /* Pods_adevinta_technical_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1974A0A5B63358C007BCEA45 /* Pods_adevinta_technical_test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DB0D97023EDFC7B00007BED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DB0D95123EDFC7800007BED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DB0D95823EDFC7800007BED;
+			remoteInfo = "adevinta-technical-test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1974A0A5B63358C007BCEA45 /* Pods_adevinta_technical_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adevinta_technical_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB0D95923EDFC7800007BED /* adevinta-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adevinta-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB0D95C23EDFC7800007BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2DB0D96023EDFC7800007BED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DB0D96523EDFC7B00007BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DB0D96823EDFC7B00007BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DB0D96A23EDFC7B00007BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB0D96F23EDFC7B00007BED /* adevinta-technical-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "adevinta-technical-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB0D97323EDFC7B00007BED /* adevinta_technical_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adevinta_technical_testTests.swift; sourceTree = "<group>"; };
+		2DB0D97523EDFC7B00007BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB0D97F23EDFD0C00007BED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2DB0D98023EDFD0C00007BED /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2DB0D98123EDFD0C00007BED /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2DB0D98223EDFD0C00007BED /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		2DB0D98A23EDFE0800007BED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		92005A5430AFD16B60945CFC /* Pods-adevinta-technical-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adevinta-technical-testTests.release.xcconfig"; path = "Target Support Files/Pods-adevinta-technical-testTests/Pods-adevinta-technical-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		A325BF48CC113CECCC2F689C /* Pods-adevinta-technical-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adevinta-technical-testTests.debug.xcconfig"; path = "Target Support Files/Pods-adevinta-technical-testTests/Pods-adevinta-technical-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF505004CFF40B9BEE68116B /* Pods-adevinta-technical-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adevinta-technical-test.release.xcconfig"; path = "Target Support Files/Pods-adevinta-technical-test/Pods-adevinta-technical-test.release.xcconfig"; sourceTree = "<group>"; };
+		B5D316796DC5A30656F60051 /* Pods_adevinta_technical_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adevinta_technical_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0D5DCCE773515252D6F806E /* Pods-adevinta-technical-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adevinta-technical-test.debug.xcconfig"; path = "Target Support Files/Pods-adevinta-technical-test/Pods-adevinta-technical-test.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DB0D95623EDFC7800007BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7D34889A0801155C1DF6447 /* Pods_adevinta_technical_test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB0D96C23EDFC7B00007BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B9BD34CF4092357E66D82F6 /* Pods_adevinta_technical_testTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DB0D95023EDFC7800007BED = {
+			isa = PBXGroup;
+			children = (
+				2DB0D95B23EDFC7800007BED /* adevinta-technical-test */,
+				2DB0D97223EDFC7B00007BED /* adevinta-technical-testTests */,
+				2DB0D95A23EDFC7800007BED /* Products */,
+				B41170F808CDF84088B832EA /* Pods */,
+				A3B409E85B20D8F93AF5310C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2DB0D95A23EDFC7800007BED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DB0D95923EDFC7800007BED /* adevinta-technical-test.app */,
+				2DB0D96F23EDFC7B00007BED /* adevinta-technical-testTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DB0D95B23EDFC7800007BED /* adevinta-technical-test */ = {
+			isa = PBXGroup;
+			children = (
+				2DB0D98923EDFDCF00007BED /* Core */,
+				2DB0D98823EDFDC500007BED /* Infrastructure */,
+				2DB0D98723EDFDBD00007BED /* Presentation */,
+				2DB0D95C23EDFC7800007BED /* AppDelegate.swift */,
+				2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */,
+				2DB0D96023EDFC7800007BED /* ViewController.swift */,
+				2DB0D96523EDFC7B00007BED /* Assets.xcassets */,
+				2DB0D96723EDFC7B00007BED /* LaunchScreen.storyboard */,
+				2DB0D96A23EDFC7B00007BED /* Info.plist */,
+			);
+			path = "adevinta-technical-test";
+			sourceTree = "<group>";
+		};
+		2DB0D97223EDFC7B00007BED /* adevinta-technical-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DB0D97323EDFC7B00007BED /* adevinta_technical_testTests.swift */,
+				2DB0D97523EDFC7B00007BED /* Info.plist */,
+			);
+			path = "adevinta-technical-testTests";
+			sourceTree = "<group>";
+		};
+		2DB0D97E23EDFCF600007BED /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2DB0D97F23EDFD0C00007BED /* MainViewController.swift */,
+				2DB0D98023EDFD0C00007BED /* MainView.swift */,
+				2DB0D98123EDFD0C00007BED /* MainViewModel.swift */,
+				2DB0D98223EDFD0C00007BED /* MainView.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2DB0D98723EDFDBD00007BED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2DB0D97E23EDFCF600007BED /* Main */,
+				2DB0D98A23EDFE0800007BED /* Coordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2DB0D98823EDFDC500007BED /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		2DB0D98923EDFDCF00007BED /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A3B409E85B20D8F93AF5310C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1974A0A5B63358C007BCEA45 /* Pods_adevinta_technical_test.framework */,
+				B5D316796DC5A30656F60051 /* Pods_adevinta_technical_testTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B41170F808CDF84088B832EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0D5DCCE773515252D6F806E /* Pods-adevinta-technical-test.debug.xcconfig */,
+				AF505004CFF40B9BEE68116B /* Pods-adevinta-technical-test.release.xcconfig */,
+				A325BF48CC113CECCC2F689C /* Pods-adevinta-technical-testTests.debug.xcconfig */,
+				92005A5430AFD16B60945CFC /* Pods-adevinta-technical-testTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DB0D95823EDFC7800007BED /* adevinta-technical-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DB0D97823EDFC7B00007BED /* Build configuration list for PBXNativeTarget "adevinta-technical-test" */;
+			buildPhases = (
+				892442540914264A20BF6B79 /* [CP] Check Pods Manifest.lock */,
+				2DB0D95523EDFC7800007BED /* Sources */,
+				2DB0D95623EDFC7800007BED /* Frameworks */,
+				2DB0D95723EDFC7800007BED /* Resources */,
+				F8C734A6CF48B9BFFE915BBA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "adevinta-technical-test";
+			productName = "adevinta-technical-test";
+			productReference = 2DB0D95923EDFC7800007BED /* adevinta-technical-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DB0D96E23EDFC7B00007BED /* adevinta-technical-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DB0D97B23EDFC7C00007BED /* Build configuration list for PBXNativeTarget "adevinta-technical-testTests" */;
+			buildPhases = (
+				0E95CCF5E793739A1D9D6BEA /* [CP] Check Pods Manifest.lock */,
+				2DB0D96B23EDFC7B00007BED /* Sources */,
+				2DB0D96C23EDFC7B00007BED /* Frameworks */,
+				2DB0D96D23EDFC7B00007BED /* Resources */,
+				8CAF164555A6923E61BD0610 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DB0D97123EDFC7B00007BED /* PBXTargetDependency */,
+			);
+			name = "adevinta-technical-testTests";
+			productName = "adevinta-technical-testTests";
+			productReference = 2DB0D96F23EDFC7B00007BED /* adevinta-technical-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DB0D95123EDFC7800007BED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Francisco Guerrero";
+				TargetAttributes = {
+					2DB0D95823EDFC7800007BED = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					2DB0D96E23EDFC7B00007BED = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 2DB0D95823EDFC7800007BED;
+					};
+				};
+			};
+			buildConfigurationList = 2DB0D95423EDFC7800007BED /* Build configuration list for PBXProject "adevinta-technical-test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DB0D95023EDFC7800007BED;
+			productRefGroup = 2DB0D95A23EDFC7800007BED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DB0D95823EDFC7800007BED /* adevinta-technical-test */,
+				2DB0D96E23EDFC7B00007BED /* adevinta-technical-testTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DB0D95723EDFC7800007BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB0D96923EDFC7B00007BED /* LaunchScreen.storyboard in Resources */,
+				2DB0D98623EDFD0C00007BED /* MainView.xib in Resources */,
+				2DB0D96623EDFC7B00007BED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB0D96D23EDFC7B00007BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E95CCF5E793739A1D9D6BEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-adevinta-technical-testTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		892442540914264A20BF6B79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-adevinta-technical-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CAF164555A6923E61BD0610 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adevinta-technical-testTests/Pods-adevinta-technical-testTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adevinta-technical-testTests/Pods-adevinta-technical-testTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-adevinta-technical-testTests/Pods-adevinta-technical-testTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C734A6CF48B9BFFE915BBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adevinta-technical-test/Pods-adevinta-technical-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adevinta-technical-test/Pods-adevinta-technical-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-adevinta-technical-test/Pods-adevinta-technical-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DB0D95523EDFC7800007BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB0D96123EDFC7800007BED /* ViewController.swift in Sources */,
+				2DB0D95D23EDFC7800007BED /* AppDelegate.swift in Sources */,
+				2DB0D95F23EDFC7800007BED /* SceneDelegate.swift in Sources */,
+				2DB0D98423EDFD0C00007BED /* MainView.swift in Sources */,
+				2DB0D98323EDFD0C00007BED /* MainViewController.swift in Sources */,
+				2DB0D98523EDFD0C00007BED /* MainViewModel.swift in Sources */,
+				2DB0D98B23EDFE0800007BED /* Coordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DB0D96B23EDFC7B00007BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB0D97423EDFC7B00007BED /* adevinta_technical_testTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DB0D97123EDFC7B00007BED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DB0D95823EDFC7800007BED /* adevinta-technical-test */;
+			targetProxy = 2DB0D97023EDFC7B00007BED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DB0D96723EDFC7B00007BED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DB0D96823EDFC7B00007BED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DB0D97623EDFC7B00007BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DB0D97723EDFC7B00007BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DB0D97923EDFC7C00007BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0D5DCCE773515252D6F806E /* Pods-adevinta-technical-test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "adevinta-technical-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.adevinta-technical-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DB0D97A23EDFC7C00007BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF505004CFF40B9BEE68116B /* Pods-adevinta-technical-test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "adevinta-technical-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.adevinta-technical-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DB0D97C23EDFC7C00007BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A325BF48CC113CECCC2F689C /* Pods-adevinta-technical-testTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "adevinta-technical-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.adevinta-technical-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adevinta-technical-test.app/adevinta-technical-test";
+			};
+			name = Debug;
+		};
+		2DB0D97D23EDFC7C00007BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92005A5430AFD16B60945CFC /* Pods-adevinta-technical-testTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "adevinta-technical-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.adevinta-technical-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adevinta-technical-test.app/adevinta-technical-test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DB0D95423EDFC7800007BED /* Build configuration list for PBXProject "adevinta-technical-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB0D97623EDFC7B00007BED /* Debug */,
+				2DB0D97723EDFC7B00007BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DB0D97823EDFC7B00007BED /* Build configuration list for PBXNativeTarget "adevinta-technical-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB0D97923EDFC7C00007BED /* Debug */,
+				2DB0D97A23EDFC7C00007BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DB0D97B23EDFC7C00007BED /* Build configuration list for PBXNativeTarget "adevinta-technical-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB0D97C23EDFC7C00007BED /* Debug */,
+				2DB0D97D23EDFC7C00007BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DB0D95123EDFC7800007BED /* Project object */;
+}
