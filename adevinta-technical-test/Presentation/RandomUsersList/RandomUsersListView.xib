@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RandomUsersListView" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RandomUsersListView" customModule="adevinta_technical_test" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQs-uL-3xM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-XE-BPA">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YQs-uL-3xM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5cH-m2-aJm"/>
+                <constraint firstItem="J1z-XE-BPA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6xQ-vy-3hs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YQs-uL-3xM" secondAttribute="bottom" id="MCR-zK-Nd6"/>
+                <constraint firstItem="YQs-uL-3xM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="r8L-Ky-cQc"/>
+                <constraint firstItem="J1z-XE-BPA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wBE-Gg-1w9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YQs-uL-3xM" secondAttribute="trailing" id="wPI-3I-Ixx"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="loadingView" destination="J1z-XE-BPA" id="g8K-34-8ff"/>
+                <outlet property="tableView" destination="YQs-uL-3xM" id="Vqf-Ez-RPZ"/>
+            </connections>
             <point key="canvasLocation" x="136" y="127"/>
         </view>
     </objects>

@@ -15,7 +15,7 @@ class CoordinatorDefault {
     }
     
     func start() {
-        let viewController = createMainViewController()
+        let viewController = createRandomUsersViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
@@ -24,8 +24,9 @@ class CoordinatorDefault {
         viewNavigation = navigationController
     }
     
-    private func createMainViewController() -> MainViewController {
-        return MainViewController(viewModel: MainViewModel())
+    private func createRandomUsersViewController() -> RandomUsersListViewController {
+        let viewModel = Factory.createRandomUsersListViewModel()
+        return RandomUsersListViewController(viewModel: viewModel)
     }
     
     private func pushViewController(viewController: UIViewController) {

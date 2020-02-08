@@ -20,15 +20,12 @@
 		2DA3B00923EE700A00091F62 /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B00723EE700A00091F62 /* ItemCellView.swift */; };
 		2DA3B00A23EE700A00091F62 /* ItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA3B00823EE700A00091F62 /* ItemCellView.xib */; };
 		2DA3B00C23EE715500091F62 /* RandomUsersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B00B23EE715500091F62 /* RandomUsersListViewModelTests.swift */; };
+		2DA3B00E23EE78FA00091F62 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B00D23EE78FA00091F62 /* Factory.swift */; };
 		2DB0D95D23EDFC7800007BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95C23EDFC7800007BED /* AppDelegate.swift */; };
 		2DB0D95F23EDFC7800007BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */; };
 		2DB0D96123EDFC7800007BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D96023EDFC7800007BED /* ViewController.swift */; };
 		2DB0D96623EDFC7B00007BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0D96523EDFC7B00007BED /* Assets.xcassets */; };
 		2DB0D96923EDFC7B00007BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0D96723EDFC7B00007BED /* LaunchScreen.storyboard */; };
-		2DB0D98323EDFD0C00007BED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D97F23EDFD0C00007BED /* MainViewController.swift */; };
-		2DB0D98423EDFD0C00007BED /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D98023EDFD0C00007BED /* MainView.swift */; };
-		2DB0D98523EDFD0C00007BED /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D98123EDFD0C00007BED /* MainViewModel.swift */; };
-		2DB0D98623EDFD0C00007BED /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0D98223EDFD0C00007BED /* MainView.xib */; };
 		2DB0D98B23EDFE0800007BED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D98A23EDFE0800007BED /* Coordinator.swift */; };
 		2DB0D98E23EE01EF00007BED /* RandomUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D98D23EE01EF00007BED /* RandomUsersService.swift */; };
 		2DB0D99223EE024B00007BED /* RandomUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D99123EE024B00007BED /* RandomUsers.swift */; };
@@ -84,6 +81,7 @@
 		2DA3B00723EE700A00091F62 /* ItemCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
 		2DA3B00823EE700A00091F62 /* ItemCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCellView.xib; sourceTree = "<group>"; };
 		2DA3B00B23EE715500091F62 /* RandomUsersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersListViewModelTests.swift; sourceTree = "<group>"; };
+		2DA3B00D23EE78FA00091F62 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		2DB0D95923EDFC7800007BED /* adevinta-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adevinta-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB0D95C23EDFC7800007BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,10 +91,6 @@
 		2DB0D96A23EDFC7B00007BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DB0D96F23EDFC7B00007BED /* adevinta-technical-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "adevinta-technical-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB0D97523EDFC7B00007BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DB0D97F23EDFD0C00007BED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		2DB0D98023EDFD0C00007BED /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		2DB0D98123EDFD0C00007BED /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		2DB0D98223EDFD0C00007BED /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		2DB0D98A23EDFE0800007BED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2DB0D98D23EE01EF00007BED /* RandomUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersService.swift; sourceTree = "<group>"; };
 		2DB0D99123EE024B00007BED /* RandomUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsers.swift; sourceTree = "<group>"; };
@@ -243,6 +237,7 @@
 				2DB0D96523EDFC7B00007BED /* Assets.xcassets */,
 				2DB0D96723EDFC7B00007BED /* LaunchScreen.storyboard */,
 				2DB0D96A23EDFC7B00007BED /* Info.plist */,
+				2DA3B00D23EE78FA00091F62 /* Factory.swift */,
 			);
 			path = "adevinta-technical-test";
 			sourceTree = "<group>";
@@ -260,22 +255,10 @@
 			path = "adevinta-technical-testTests";
 			sourceTree = "<group>";
 		};
-		2DB0D97E23EDFCF600007BED /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				2DB0D97F23EDFD0C00007BED /* MainViewController.swift */,
-				2DB0D98023EDFD0C00007BED /* MainView.swift */,
-				2DB0D98123EDFD0C00007BED /* MainViewModel.swift */,
-				2DB0D98223EDFD0C00007BED /* MainView.xib */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		2DB0D98723EDFDBD00007BED /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				2DA3AFFD23EE6E5000091F62 /* RandomUsersList */,
-				2DB0D97E23EDFCF600007BED /* Main */,
 				2DB0D98A23EDFE0800007BED /* Coordinator.swift */,
 			);
 			path = Presentation;
@@ -477,7 +460,6 @@
 			files = (
 				2DB0D96923EDFC7B00007BED /* LaunchScreen.storyboard in Resources */,
 				2DA3B00A23EE700A00091F62 /* ItemCellView.xib in Resources */,
-				2DB0D98623EDFD0C00007BED /* MainView.xib in Resources */,
 				2DA3B00523EE6E8300091F62 /* RandomUsersListView.xib in Resources */,
 				2DB0D96623EDFC7B00007BED /* Assets.xcassets in Resources */,
 			);
@@ -593,12 +575,9 @@
 				2DB0D9A523EE52E100007BED /* Pictures.swift in Sources */,
 				2DA3B00923EE700A00091F62 /* ItemCellView.swift in Sources */,
 				2DB0D95F23EDFC7800007BED /* SceneDelegate.swift in Sources */,
-				2DB0D98423EDFD0C00007BED /* MainView.swift in Sources */,
 				2DA3B00323EE6E8300091F62 /* RandomUsersListView.swift in Sources */,
-				2DB0D98323EDFD0C00007BED /* MainViewController.swift in Sources */,
 				2DB0D9A123EE52BD00007BED /* Name.swift in Sources */,
 				2DA3AFED23EE620200091F62 /* RandomUsersRespository.swift in Sources */,
-				2DB0D98523EDFD0C00007BED /* MainViewModel.swift in Sources */,
 				2DB0D9AB23EE531400007BED /* UserDateResponse.swift in Sources */,
 				2DB0D98B23EDFE0800007BED /* Coordinator.swift in Sources */,
 				2DA3B00223EE6E8300091F62 /* RandomUsersListViewController.swift in Sources */,
@@ -613,6 +592,7 @@
 				2DB0D9C123EE53D900007BED /* UserTimeZone.swift in Sources */,
 				2DB0D9B723EE538500007BED /* StreetResponse.swift in Sources */,
 				2DB0D9BF23EE53CA00007BED /* UserTimeZoneResponse.swift in Sources */,
+				2DA3B00E23EE78FA00091F62 /* Factory.swift in Sources */,
 				2DB0D9AF23EE533500007BED /* LoginResponse.swift in Sources */,
 				2DB0D9BB23EE53A300007BED /* CoordinateResponse.swift in Sources */,
 				2DB0D9A723EE52F200007BED /* NameValueResponse.swift in Sources */,
