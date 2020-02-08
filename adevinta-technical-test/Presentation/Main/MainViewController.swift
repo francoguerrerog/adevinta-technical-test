@@ -1,5 +1,5 @@
-
 import UIKit
+import RxSwift
 
 class MainViewController: UIViewController {
     
@@ -24,6 +24,15 @@ class MainViewController: UIViewController {
     }
 
     private func bindViewModel() {
-
+        let service = ApiRandomUsersService()
+        
+        service.find()
+            .subscribeOn(MainScheduler.instance)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onSuccess: { (randomUsers) in
+                print(randomUsers)
+            }, onError: { (error) in
+                print(error)
+            }).disposed(by: DisposeBag())
     }
 }
