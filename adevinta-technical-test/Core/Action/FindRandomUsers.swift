@@ -26,12 +26,13 @@ class FindRandomUsersDefault: FindRandomUsers {
 extension FindRandomUsersDefault {
     
     private func findNewRandomUsers() -> Single<RandomUsers> {
+        
         return randomUsersService.find()
     }
     
     private func filterDuplicatedUsers(_ randomUsers: RandomUsers) -> Single<RandomUsers> {
         
-        return Single<RandomUsers>.create { single in
+        return Single<RandomUsers>.create { observer in
             
             var existingUsers: [RandomUser] = self.findPreviousRandomUsersIfExist()
             randomUsers.users.forEach { (user) in
@@ -40,7 +41,7 @@ extension FindRandomUsersDefault {
                 }
             }
             
-            single(.success(RandomUsers(users: existingUsers)))
+            observer(.success(RandomUsers(users: existingUsers)))
             return Disposables.create { }
         }
     }
@@ -63,9 +64,11 @@ extension FindRandomUsersDefault {
     
     private func updateRandomUsers(_ randomUsers: RandomUsers) -> Single<RandomUsers> {
         
-        return Single<RandomUsers>.create { single in
+        return Single<RandomUsers>.create { observer in
+            
             self.randomUsersRespository.put(randomUsers)
-            single(.success(randomUsers))
+            observer(.success(randomUsers))
+            
             return Disposables.create { }
         }
     }

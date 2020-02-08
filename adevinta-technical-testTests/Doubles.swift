@@ -13,3 +13,6 @@ extension FindRandomUsers {}
 
 //sourcery: AutoMockable
 extension Coordinator {}
+
+//sourcery: AutoMockable
+extension RemovedRandomUsersRepository {}

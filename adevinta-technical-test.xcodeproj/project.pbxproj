@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D888C0223EF15630052632F /* RemoveRandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0123EF15630052632F /* RemoveRandomUser.swift */; };
+		2D888C0423EF1BEC0052632F /* RemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0323EF1BEC0052632F /* RemovedRandomUsersRepository.swift */; };
+		2D888C0623EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */; };
+		2D888C0823EF1F1D0052632F /* RemoveRandomUserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0723EF1F1D0052632F /* RemoveRandomUserDefaultTests.swift */; };
 		2DA3AFED23EE620200091F62 /* RandomUsersRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3AFEC23EE620200091F62 /* RandomUsersRespository.swift */; };
 		2DA3AFF023EE625200091F62 /* InMemoryRandomUsersRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3AFEF23EE625200091F62 /* InMemoryRandomUsersRespository.swift */; };
 		2DA3AFF523EE642400091F62 /* FindRandomUsersDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3AFF423EE642400091F62 /* FindRandomUsersDefaultTests.swift */; };
@@ -75,6 +79,10 @@
 
 /* Begin PBXFileReference section */
 		1974A0A5B63358C007BCEA45 /* Pods_adevinta_technical_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adevinta_technical_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D888C0123EF15630052632F /* RemoveRandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRandomUser.swift; sourceTree = "<group>"; };
+		2D888C0323EF1BEC0052632F /* RemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
+		2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
+		2D888C0723EF1F1D0052632F /* RemoveRandomUserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRandomUserDefaultTests.swift; sourceTree = "<group>"; };
 		2DA3AFEC23EE620200091F62 /* RandomUsersRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersRespository.swift; sourceTree = "<group>"; };
 		2DA3AFEF23EE625200091F62 /* InMemoryRandomUsersRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRandomUsersRespository.swift; sourceTree = "<group>"; };
 		2DA3AFF423EE642400091F62 /* FindRandomUsersDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRandomUsersDefaultTests.swift; sourceTree = "<group>"; };
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA3AFEC23EE620200091F62 /* RandomUsersRespository.swift */,
+				2D888C0323EF1BEC0052632F /* RemovedRandomUsersRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA3AFEF23EE625200091F62 /* InMemoryRandomUsersRespository.swift */,
+				2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -195,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA3AFF423EE642400091F62 /* FindRandomUsersDefaultTests.swift */,
+				2D888C0723EF1F1D0052632F /* RemoveRandomUserDefaultTests.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -394,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB0D9C323EE559400007BED /* FindRandomUsers.swift */,
+				2D888C0123EF15630052632F /* RemoveRandomUser.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -611,6 +623,7 @@
 				2DA3B01023EE7AF600091F62 /* UIImageView+Load.swift in Sources */,
 				2DB0D9A923EE530300007BED /* NameValue.swift in Sources */,
 				2DB0D9BD23EE53B100007BED /* Coordinate.swift in Sources */,
+				2D888C0223EF15630052632F /* RemoveRandomUser.swift in Sources */,
 				2DB0D99523EE026A00007BED /* ApiRandomUsersService.swift in Sources */,
 				2DA3B01723EE7E1300091F62 /* RandomUserDetailViewController.swift in Sources */,
 				2DB0D9C423EE559400007BED /* FindRandomUsers.swift in Sources */,
@@ -636,6 +649,7 @@
 				2DB0D9B323EE536100007BED /* LocationResponse.swift in Sources */,
 				2DB0D9B123EE534600007BED /* Login.swift in Sources */,
 				2DB0D98E23EE01EF00007BED /* RandomUsersService.swift in Sources */,
+				2D888C0423EF1BEC0052632F /* RemovedRandomUsersRepository.swift in Sources */,
 				2DA3AFF023EE625200091F62 /* InMemoryRandomUsersRespository.swift in Sources */,
 				2DA3B01823EE7E1300091F62 /* RandomUserDetailView.swift in Sources */,
 				2DB0D99B23EE048A00007BED /* RadomUsersResponse.swift in Sources */,
@@ -646,6 +660,7 @@
 				2DA3B00E23EE78FA00091F62 /* Factory.swift in Sources */,
 				2DB0D9AF23EE533500007BED /* LoginResponse.swift in Sources */,
 				2DB0D9BB23EE53A300007BED /* CoordinateResponse.swift in Sources */,
+				2D888C0623EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift in Sources */,
 				2DB0D9A723EE52F200007BED /* NameValueResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +675,7 @@
 				2DA3AFFA23EE6AF900091F62 /* Doubles.swift in Sources */,
 				2DA3AFF523EE642400091F62 /* FindRandomUsersDefaultTests.swift in Sources */,
 				2DA3B01F23EE8CCE00091F62 /* RandomUserDetailViewModelTests.swift in Sources */,
+				2D888C0823EF1F1D0052632F /* RemoveRandomUserDefaultTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
