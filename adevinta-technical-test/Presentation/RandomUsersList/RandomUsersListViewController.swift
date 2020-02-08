@@ -63,6 +63,9 @@ class RandomUsersListViewController: UIViewController {
     private func configureCell(_ cell: ItemCellView, with item: RandomUser) {
         cell.titleLabel.text = "\(item.name.title) \(item.name.first) \(item.name.last)"
         cell.subtitleLabel.text = "\(item.location.street.number) \(item.location.street.name) \(item.location.city)"
+        if let url = URL(string: item.picture.thumbnail) {
+            cell.itemImage.load(url: url)
+        }
     }
 }
 
