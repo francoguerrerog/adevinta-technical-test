@@ -10,6 +10,7 @@ class RandomUsersListViewModelTests: XCTestCase {
     private var viewModel: RandomUsersListViewModel!
     private let coordinator = CoordinatorMock()
     private let findRandomUsers = FindRandomUsersMock()
+    private let removeRandomUser = RemoveRandomUserMock()
     private let randomUsers = FactoryTest.createPreviousRandomUsers()
     
     private var scheduler: TestScheduler!
@@ -46,7 +47,7 @@ class RandomUsersListViewModelTests: XCTestCase {
         Given(findRandomUsers, .execute(willReturn: .just(randomUsers)))
         givenAGoToDetailScenario()
         
-        WhenSelectCell()
+        WhenSelectOpenCell()
         
         thenGoToDetail()
     }
@@ -60,11 +61,26 @@ class RandomUsersListViewModelTests: XCTestCase {
         thenFindUsers()
     }
     
+    func test_removeRandomUser() {
+        Given(findRandomUsers, .execute(willReturn: .just(randomUsers)))
+        Given(removeRandomUser, .execute(.any, willReturn: .just(randomUsers)))
+        givenARemoveRandomUserScenario()
+        
+        whenSelectRemoveCell()
+        
+        thenRemoveRandomUser()
+    }
+    
     fileprivate func givenAViewModel() {
-        viewModel = RandomUsersListViewModel(coordinator, findRandomUsers)
+        viewModel = RandomUsersListViewModel(coordinator, findRandomUsers, removeRandomUser)
     }
     
     fileprivate func givenAGoToDetailScenario() {
+        givenAViewModel()
+        whenViewDidLoad()
+    }
+    
+    fileprivate func givenARemoveRandomUserScenario() {
         givenAViewModel()
         whenViewDidLoad()
     }
@@ -73,12 +89,16 @@ class RandomUsersListViewModelTests: XCTestCase {
         viewModel.viewDidLoad()
     }
     
-    fileprivate func WhenSelectCell() {
-        viewModel.selectCell(at: 0)
+    fileprivate func WhenSelectOpenCell() {
+        viewModel.selectOpenCell(at: 0)
     }
     
     fileprivate func whenScrollToBottom() {
         viewModel.scrollToBottom()
+    }
+    
+    fileprivate func whenSelectRemoveCell() {
+        viewModel.selectRemoveCell(at: 0)
     }
     
     fileprivate func thenFindUsers() {
@@ -93,5 +113,9 @@ class RandomUsersListViewModelTests: XCTestCase {
     
     fileprivate func thenGoToDetail() {
         Verify(coordinator, .once, .goToRandomUserDetail(.any))
+    }
+    
+    fileprivate func thenRemoveRandomUser() {
+        Verify(removeRandomUser, .once, .execute(.any))
     }
 }

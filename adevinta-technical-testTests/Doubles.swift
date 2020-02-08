@@ -16,3 +16,6 @@ extension Coordinator {}
 
 //sourcery: AutoMockable
 extension RemovedRandomUsersRepository {}
+
+//sourcery: AutoMockable
+extension RemoveRandomUser {}

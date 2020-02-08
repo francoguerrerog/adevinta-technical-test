@@ -15,15 +15,18 @@ class RandomUsersListViewModel {
     
     private let coordinator: Coordinator
     private let findRandomUsers: FindRandomUsers
+    private let removeRandomUser: RemoveRandomUser
     
     private var randomUsers: [RandomUser] = []
     
     private let disposeBag = DisposeBag()
 
     init(_ coordinator: Coordinator,
-         _ findRandomUsers: FindRandomUsers) {
+         _ findRandomUsers: FindRandomUsers,
+         _ removeRandomUser: RemoveRandomUser) {
         self.coordinator = coordinator
         self.findRandomUsers = findRandomUsers
+        self.removeRandomUser = removeRandomUser
     }
     
     private func findNewRandomUsers() {
@@ -63,6 +66,19 @@ class RandomUsersListViewModel {
         }
         return nil
     }
+    
+    private func removeAndUpdateRandomUsers(_ randomUser: RandomUser) {
+        
+        loadingSubject.onNext(true)
+        removeRandomUser.execute(randomUser)
+            .subscribe(onSuccess: { [weak self] randomUsers in
+                self?.loadingSubject.onNext(false)
+                self?.saveCurrentRandomUsers(randomUsers.users)
+                self?.emitRandomUsers(randomUsers.users)
+            }) { [weak self] _ in
+                self?.loadingSubject.onNext(false)
+        }.disposed(by: disposeBag)
+    }
 }
 
 extension RandomUsersListViewModel {
@@ -71,7 +87,7 @@ extension RandomUsersListViewModel {
         findNewRandomUsers()
     }
     
-    func selectCell(at index: Int) {
+    func selectOpenCell(at index: Int) {
         
         guard let randomUser = self.randomUserAtIndex(randomUsers, index) else { return }
         coordinator.goToRandomUserDetail(randomUser)
@@ -80,5 +96,11 @@ extension RandomUsersListViewModel {
     func scrollToBottom() {
         
         findNewRandomUsers()
+    }
+    
+    func selectRemoveCell(at index: Int) {
+        
+        guard let randomUser = self.randomUserAtIndex(randomUsers, index) else { return }
+        removeAndUpdateRandomUsers(randomUser)
     }
 }
