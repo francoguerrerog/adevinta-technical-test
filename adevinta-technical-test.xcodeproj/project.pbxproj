@@ -22,6 +22,10 @@
 		2DA3B00C23EE715500091F62 /* RandomUsersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B00B23EE715500091F62 /* RandomUsersListViewModelTests.swift */; };
 		2DA3B00E23EE78FA00091F62 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B00D23EE78FA00091F62 /* Factory.swift */; };
 		2DA3B01023EE7AF600091F62 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B00F23EE7AF600091F62 /* UIImageView+Load.swift */; };
+		2DA3B01723EE7E1300091F62 /* RandomUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B01323EE7E1300091F62 /* RandomUserDetailViewController.swift */; };
+		2DA3B01823EE7E1300091F62 /* RandomUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B01423EE7E1300091F62 /* RandomUserDetailView.swift */; };
+		2DA3B01923EE7E1300091F62 /* RandomUserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B01523EE7E1300091F62 /* RandomUserDetailViewModel.swift */; };
+		2DA3B01A23EE7E1300091F62 /* RandomUserDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA3B01623EE7E1300091F62 /* RandomUserDetailView.xib */; };
 		2DB0D95D23EDFC7800007BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95C23EDFC7800007BED /* AppDelegate.swift */; };
 		2DB0D95F23EDFC7800007BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */; };
 		2DB0D96123EDFC7800007BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D96023EDFC7800007BED /* ViewController.swift */; };
@@ -84,6 +88,10 @@
 		2DA3B00B23EE715500091F62 /* RandomUsersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersListViewModelTests.swift; sourceTree = "<group>"; };
 		2DA3B00D23EE78FA00091F62 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		2DA3B00F23EE7AF600091F62 /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
+		2DA3B01323EE7E1300091F62 /* RandomUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailViewController.swift; sourceTree = "<group>"; };
+		2DA3B01423EE7E1300091F62 /* RandomUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailView.swift; sourceTree = "<group>"; };
+		2DA3B01523EE7E1300091F62 /* RandomUserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailViewModel.swift; sourceTree = "<group>"; };
+		2DA3B01623EE7E1300091F62 /* RandomUserDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomUserDetailView.xib; sourceTree = "<group>"; };
 		2DB0D95923EDFC7800007BED /* adevinta-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adevinta-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB0D95C23EDFC7800007BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +223,17 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		2DA3B01223EE7DEE00091F62 /* RandomUserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2DA3B01323EE7E1300091F62 /* RandomUserDetailViewController.swift */,
+				2DA3B01423EE7E1300091F62 /* RandomUserDetailView.swift */,
+				2DA3B01523EE7E1300091F62 /* RandomUserDetailViewModel.swift */,
+				2DA3B01623EE7E1300091F62 /* RandomUserDetailView.xib */,
+			);
+			path = RandomUserDetail;
+			sourceTree = "<group>";
+		};
 		2DB0D95023EDFC7800007BED = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +289,7 @@
 			children = (
 				2DA3B01123EE7B0200091F62 /* Common */,
 				2DA3AFFD23EE6E5000091F62 /* RandomUsersList */,
+				2DA3B01223EE7DEE00091F62 /* RandomUserDetail */,
 				2DB0D98A23EDFE0800007BED /* Coordinator.swift */,
 			);
 			path = Presentation;
@@ -472,6 +492,7 @@
 				2DB0D96923EDFC7B00007BED /* LaunchScreen.storyboard in Resources */,
 				2DA3B00A23EE700A00091F62 /* ItemCellView.xib in Resources */,
 				2DA3B00523EE6E8300091F62 /* RandomUsersListView.xib in Resources */,
+				2DA3B01A23EE7E1300091F62 /* RandomUserDetailView.xib in Resources */,
 				2DB0D96623EDFC7B00007BED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,10 +593,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB0D99823EE036800007BED /* ApiError.swift in Sources */,
+				2DA3B01923EE7E1300091F62 /* RandomUserDetailViewModel.swift in Sources */,
 				2DA3B01023EE7AF600091F62 /* UIImageView+Load.swift in Sources */,
 				2DB0D9A923EE530300007BED /* NameValue.swift in Sources */,
 				2DB0D9BD23EE53B100007BED /* Coordinate.swift in Sources */,
 				2DB0D99523EE026A00007BED /* ApiRandomUsersService.swift in Sources */,
+				2DA3B01723EE7E1300091F62 /* RandomUserDetailViewController.swift in Sources */,
 				2DB0D9C423EE559400007BED /* FindRandomUsers.swift in Sources */,
 				2DA3B00423EE6E8300091F62 /* RandomUsersListViewModel.swift in Sources */,
 				2DB0D9AD23EE532500007BED /* UserDate.swift in Sources */,
@@ -599,6 +622,7 @@
 				2DB0D9B123EE534600007BED /* Login.swift in Sources */,
 				2DB0D98E23EE01EF00007BED /* RandomUsersService.swift in Sources */,
 				2DA3AFF023EE625200091F62 /* InMemoryRandomUsersRespository.swift in Sources */,
+				2DA3B01823EE7E1300091F62 /* RandomUserDetailView.swift in Sources */,
 				2DB0D99B23EE048A00007BED /* RadomUsersResponse.swift in Sources */,
 				2DB0D9A323EE52D000007BED /* PicturesResponse.swift in Sources */,
 				2DB0D9C123EE53D900007BED /* UserTimeZone.swift in Sources */,

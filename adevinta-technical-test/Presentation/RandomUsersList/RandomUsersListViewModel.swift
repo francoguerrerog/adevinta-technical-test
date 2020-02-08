@@ -13,11 +13,14 @@ class RandomUsersListViewModel {
     private let randomUsersSubject = BehaviorSubject<[RandomUser]>(value: [])
     private let loadingSubject = PublishSubject<Bool>()
     
+    private let coordinator: Coordinator
     private let findRandomUsers: FindRandomUsers
     
     private let disposeBag = DisposeBag()
 
-    init(_ findRandomUsers: FindRandomUsers) {
+    init(_ coordinator: Coordinator,
+         _ findRandomUsers: FindRandomUsers) {
+        self.coordinator = coordinator
         self.findRandomUsers = findRandomUsers
     }
     
@@ -32,10 +35,25 @@ class RandomUsersListViewModel {
             }).disposed(by: disposeBag)
     }
     
+    private func randomUserAtIndex(_ randomUsers: [RandomUser], _ index: Int) -> RandomUser? {
+        if index >= 0 && index < randomUsers.count {
+            return randomUsers[index]
+        }
+        return nil
+    }
 }
 
 extension RandomUsersListViewModel {
     func viewDidLoad() {
         findNewRandomUsers()
+    }
+    
+    func selectCell(at index: Int) {
+        output.randomUsers
+            .take(1)
+            .subscribe(onNext: { (randomUsers) in
+                guard let randomUser = self.randomUserAtIndex(randomUsers, index) else { return }
+                self.coordinator.goToRandomUserDetail(randomUser)
+            }).disposed(by: disposeBag)
     }
 }

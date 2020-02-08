@@ -75,6 +75,6 @@ extension RandomUsersListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //viewModel.selectCard(index: indexPath.row)
+        viewModel.selectCell(at: indexPath.row)
     }
 }

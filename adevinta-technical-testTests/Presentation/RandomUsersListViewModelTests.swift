@@ -8,6 +8,7 @@ import RxTest
 class RandomUsersListViewModelTests: XCTestCase {
     
     private var viewModel: RandomUsersListViewModel!
+    private let coordinator = CoordinatorMock()
     private let findRandomUsers = FindRandomUsersMock()
     private let randomUsers = FactoryTest.createPreviousRandomUsers()
     
@@ -41,12 +42,30 @@ class RandomUsersListViewModelTests: XCTestCase {
         thenEmitRandomUsers()
     }
     
+    func test_goToDetail() {
+        Given(findRandomUsers, .execute(willReturn: .just(randomUsers)))
+        givenAGoToDetailScenario()
+        
+        WhenSelectCell()
+        
+        thenGoToDetail()
+    }
+    
     fileprivate func givenAViewModel() {
-        viewModel = RandomUsersListViewModel(findRandomUsers)
+        viewModel = RandomUsersListViewModel(coordinator, findRandomUsers)
+    }
+    
+    fileprivate func givenAGoToDetailScenario() {
+        givenAViewModel()
+        whenViewDidLoad()
     }
     
     fileprivate func whenViewDidLoad() {
         viewModel.viewDidLoad()
+    }
+    
+    fileprivate func WhenSelectCell() {
+        viewModel.selectCell(at: 0)
     }
     
     fileprivate func thenFindUsers() {
@@ -58,4 +77,11 @@ class RandomUsersListViewModelTests: XCTestCase {
         XCTAssertEqual(events.count, 2)
         XCTAssertEqual(events.last?.value.element?.count, 2)
     }
+    
+    fileprivate func thenGoToDetail() {
+        Verify(coordinator, .once, .goToRandomUserDetail(.any))
+    }
 }
+
+//sourcery: AutoMockable
+extension Coordinator {}
