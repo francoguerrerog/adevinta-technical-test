@@ -9,6 +9,9 @@ struct FactoryTest {
     
     private static let luis = RandomUser(gender: .male, name: Name(title: "Mr.", first: "Luis", last: "Gonzalez"), location: Location(street: Street(number: 1234, name: "street of luis"), city: "city of luis", state: "state of luis", country: "country of luis", postcode: "12345", coordinates: Coordinate(latitude: "1235", longitude: "1234"), timezone: UserTimeZone(offset: "123", description: "IDK")), email: "luis@mail.com", login: Login(uuid: "uuid", username: "username", password: "password", salt: "salt", md5: "md5", sha1: "sha1", sha256: "sha256"), dateOfBirth: UserDate(date: Date(), age: 20), dateOfRegistration: UserDate(date: Date(), age: 20), phone: "0123456", cell: "01235", id: NameValue(name: "DNI", value: "12345656"), picture: Pictures(large: "", medium: "", thumbnail: ""), nationality: "AR")
     
+    static func createRandomUser() -> RandomUser {
+        return pedro
+    }
     
     static func createPreviousRandomUsers() -> RandomUsers {
         return RandomUsers(users: [pedro, pablo])

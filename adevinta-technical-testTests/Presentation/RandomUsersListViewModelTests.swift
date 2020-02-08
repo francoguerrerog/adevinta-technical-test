@@ -95,6 +95,3 @@ class RandomUsersListViewModelTests: XCTestCase {
         Verify(coordinator, .once, .goToRandomUserDetail(.any))
     }
 }
-
-//sourcery: AutoMockable
-extension Coordinator {}

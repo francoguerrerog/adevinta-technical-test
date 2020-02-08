@@ -10,7 +10,7 @@ struct Factory {
         return RandomUsersListViewModel(coordinator, findRandomUsers)
     }
     
-    public static func createRandomUserDetailViewModel() -> RandomUserDetailViewModel {
-        return RandomUserDetailViewModel()
+    public static func createRandomUserDetailViewModel(_ randomUser: RandomUser) -> RandomUserDetailViewModel {
+        return RandomUserDetailViewModel(randomUser)
     }
 }

@@ -31,9 +31,9 @@ class CoordinatorDefault {
         return RandomUsersListViewController(viewModel: viewModel)
     }
     
-    private func createRandomUserDetailViewController() -> RandomUserDetailViewController {
+    private func createRandomUserDetailViewController(_ randomUser: RandomUser) -> RandomUserDetailViewController {
         
-        let viewModel = Factory.createRandomUserDetailViewModel()
+        let viewModel = Factory.createRandomUserDetailViewModel(randomUser)
         return RandomUserDetailViewController(viewModel: viewModel)
     }
     
@@ -47,7 +47,7 @@ class CoordinatorDefault {
 extension CoordinatorDefault: Coordinator {
     func goToRandomUserDetail(_ randomUser: RandomUser) {
         
-        let viewController = createRandomUserDetailViewController()
+        let viewController = createRandomUserDetailViewController(randomUser)
         pushViewController(viewController: viewController)
     }
 }

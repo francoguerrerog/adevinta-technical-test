@@ -10,3 +10,6 @@ extension RandomUsersService {}
 
 //sourcery: AutoMockable
 extension FindRandomUsers {}
+
+//sourcery: AutoMockable
+extension Coordinator {}

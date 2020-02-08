@@ -1,10 +1,12 @@
-
 import UIKit
+import RxSwift
 
 class RandomUserDetailViewController: UIViewController {
     
     private let viewModel: RandomUserDetailViewModel
     private lazy var mainView = RandomUserDetailView.initFromNib()
+    
+    private let disposeBag = DisposeBag()
 
     init(viewModel: RandomUserDetailViewModel) {
         self.viewModel = viewModel
@@ -21,9 +23,18 @@ class RandomUserDetailViewController: UIViewController {
         super.viewDidLoad()
 
         bindViewModel()
+        viewModel.viewDidLoad()
     }
 
     private func bindViewModel() {
-
+        bindRandomUser()
+    }
+    
+    private func bindRandomUser() {
+        viewModel.output.randomUser
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { randomUser in
+                print(randomUser)
+            }).disposed(by: disposeBag)
     }
 }
