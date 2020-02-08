@@ -71,6 +71,16 @@ class RandomUsersListViewModelTests: XCTestCase {
         thenRemoveRandomUser()
     }
     
+    func test_filterRandomUsers() {
+        Given(findRandomUsers, .execute(willReturn: .just(randomUsers)))
+        givenAFilterScenario()
+        
+        viewModel.output.randomUsers.subscribe(randomUsersObserver).disposed(by: disposeBag)
+        whenFilter()
+        
+        thenEmitFilteredRandomUsers()
+    }
+    
     fileprivate func givenAViewModel() {
         viewModel = RandomUsersListViewModel(coordinator, findRandomUsers, removeRandomUser)
     }
@@ -81,6 +91,11 @@ class RandomUsersListViewModelTests: XCTestCase {
     }
     
     fileprivate func givenARemoveRandomUserScenario() {
+        givenAViewModel()
+        whenViewDidLoad()
+    }
+    
+    fileprivate func givenAFilterScenario() {
         givenAViewModel()
         whenViewDidLoad()
     }
@@ -101,6 +116,10 @@ class RandomUsersListViewModelTests: XCTestCase {
         viewModel.selectRemoveCell(at: 0)
     }
     
+    fileprivate func whenFilter() {
+        viewModel.selectFilter("pedro")
+    }
+    
     fileprivate func thenFindUsers() {
         Verify(findRandomUsers, .once, .execute())
     }
@@ -117,5 +136,12 @@ class RandomUsersListViewModelTests: XCTestCase {
     
     fileprivate func thenRemoveRandomUser() {
         Verify(removeRandomUser, .once, .execute(.any))
+    }
+    
+    fileprivate func thenEmitFilteredRandomUsers() {
+        let events = randomUsersObserver.events
+        XCTAssertEqual(events.count, 2)
+        XCTAssertEqual(events.first?.value.element?.count, 2)
+        XCTAssertEqual(events.last?.value.element?.count, 1)
     }
 }

@@ -7,7 +7,11 @@ class RandomUsersListViewController: UIViewController {
     private let viewModel: RandomUsersListViewModel
     private lazy var mainView = RandomUsersListView.initFromNib()
     
+    private let searchController = UISearchController(searchResultsController: nil)
+    
     private var isLoading = false
+    
+    private let filterTypingSubject = PublishSubject<String>()
     
     private let disposeBag = DisposeBag()
     
@@ -27,6 +31,8 @@ class RandomUsersListViewController: UIViewController {
 
         setTitle()
         setupTableView()
+        setupSearchController()
+        bindFilterTyping()
         bindViewModel()
         viewModel.viewDidLoad()
     }
@@ -40,6 +46,16 @@ class RandomUsersListViewController: UIViewController {
         
         mainView.tableView.delegate = self
         mainView.tableView.register(UINib(nibName: ItemCellView.cellIdentifier, bundle: Bundle(for: type(of: self))), forCellReuseIdentifier: ItemCellView.cellIdentifier)
+    }
+    
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Filter..."
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
     }
 
     private func bindViewModel() {
@@ -95,9 +111,19 @@ class RandomUsersListViewController: UIViewController {
                 self?.viewModel.selectOpenCell(at: cell.tag)
         }.disposed(by: cell.disposeBag)
     }
+    
+    private func bindFilterTyping() {
+        filterTypingSubject
+            .asObservable()
+            .debounce(.milliseconds(800), scheduler: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] filter in
+                self?.viewModel.selectFilter(filter)
+            }).disposed(by: disposeBag)
+    }
 }
 
 extension RandomUsersListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 100.0
@@ -111,5 +137,21 @@ extension RandomUsersListViewController: UITableViewDelegate {
         if distanceFromBottom < height && !isLoading {
             viewModel.scrollToBottom()
         }
+    }
+}
+
+extension RandomUsersListViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        filterTypingSubject.onNext(searchController.searchBar.text!)
+    }
+}
+
+extension RandomUsersListViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
     }
 }

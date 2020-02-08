@@ -17,6 +17,7 @@ class RandomUsersListViewModel {
     private let findRandomUsers: FindRandomUsers
     private let removeRandomUser: RemoveRandomUser
     
+    private var originalRandomUsers: [RandomUser] = []
     private var randomUsers: [RandomUser] = []
     
     private let disposeBag = DisposeBag()
@@ -44,6 +45,7 @@ class RandomUsersListViewModel {
     
     private func saveCurrentRandomUsers(_ randomUsers: [RandomUser]) {
         
+        self.originalRandomUsers = randomUsers
         self.randomUsers = randomUsers
     }
     
@@ -79,6 +81,12 @@ class RandomUsersListViewModel {
                 self?.loadingSubject.onNext(false)
         }.disposed(by: disposeBag)
     }
+    
+    private func filterRandomUsers(_ randomUsers: [RandomUser], _ filter: String) -> [RandomUser] {
+        return randomUsers.filter{ $0.name.first.contains(filter) ||
+            $0.name.last.contains(filter) ||
+            $0.email.contains(filter) }
+    }
 }
 
 extension RandomUsersListViewModel {
@@ -102,5 +110,15 @@ extension RandomUsersListViewModel {
         
         guard let randomUser = self.randomUserAtIndex(randomUsers, index) else { return }
         removeAndUpdateRandomUsers(randomUser)
+    }
+    
+    func selectFilter(_ filter: String) {
+        
+        if filter == "" {
+            randomUsers = originalRandomUsers
+        } else {
+            randomUsers = filterRandomUsers(randomUsers, filter)
+        }
+        emitRandomUsers(randomUsers)
     }
 }
