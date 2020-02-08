@@ -15,12 +15,12 @@ class RandomUsersListViewModelTests: XCTestCase {
     private var scheduler: TestScheduler!
     private var disposeBag: DisposeBag!
     
-    private var randomUsersObserver: TestableObserver<[RandomUser]>!
+    private var randomUsersObserver: TestableObserver<[RandomUserListViewData]>!
     
     override func setUp() {
         scheduler = TestScheduler(initialClock: 0)
         disposeBag = DisposeBag()
-        randomUsersObserver = scheduler.createObserver([RandomUser].self)
+        randomUsersObserver = scheduler.createObserver([RandomUserListViewData].self)
     }
     
     func test_findRandomUsersWhenDidLoad() {
@@ -51,6 +51,15 @@ class RandomUsersListViewModelTests: XCTestCase {
         thenGoToDetail()
     }
     
+    func test_findRandomUsersWhenScrollToBottom() {
+        Given(findRandomUsers, .execute(willReturn: .just(randomUsers)))
+        givenAViewModel()
+        
+        whenScrollToBottom()
+        
+        thenFindUsers()
+    }
+    
     fileprivate func givenAViewModel() {
         viewModel = RandomUsersListViewModel(coordinator, findRandomUsers)
     }
@@ -66,6 +75,10 @@ class RandomUsersListViewModelTests: XCTestCase {
     
     fileprivate func WhenSelectCell() {
         viewModel.selectCell(at: 0)
+    }
+    
+    fileprivate func whenScrollToBottom() {
+        viewModel.scrollToBottom()
     }
     
     fileprivate func thenFindUsers() {

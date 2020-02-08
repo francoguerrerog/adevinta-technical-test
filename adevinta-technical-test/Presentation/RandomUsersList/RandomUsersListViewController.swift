@@ -7,6 +7,8 @@ class RandomUsersListViewController: UIViewController {
     private let viewModel: RandomUsersListViewModel
     private lazy var mainView = RandomUsersListView.initFromNib()
     
+    private var isLoading = false
+    
     private let disposeBag = DisposeBag()
     
     init(viewModel: RandomUsersListViewModel) {
@@ -47,6 +49,7 @@ class RandomUsersListViewController: UIViewController {
         viewModel.output.loading
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (loading) in
+                self?.isLoading = loading
                 self?.mainView.loadingView.isHidden = !loading
             }).disposed(by: disposeBag)
     }
@@ -60,10 +63,10 @@ class RandomUsersListViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func configureCell(_ cell: ItemCellView, with item: RandomUser) {
-        cell.titleLabel.text = "\(item.name.title) \(item.name.first) \(item.name.last)"
-        cell.subtitleLabel.text = "\(item.location.street.number) \(item.location.street.name) \(item.location.city)"
-        if let url = URL(string: item.picture.thumbnail) {
+    private func configureCell(_ cell: ItemCellView, with item: RandomUserListViewData) {
+        cell.titleLabel.text = item.name
+        cell.subtitleLabel.text = "\(item.email) \n\(item.phone)"
+        if let url = URL(string: item.picture) {
             cell.itemImage.load(url: url)
         }
     }
@@ -76,5 +79,14 @@ extension RandomUsersListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.selectCell(at: indexPath.row)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height && !isLoading {
+            viewModel.scrollToBottom()
+        }
     }
 }

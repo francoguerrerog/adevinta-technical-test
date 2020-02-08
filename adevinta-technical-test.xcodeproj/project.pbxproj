@@ -26,6 +26,7 @@
 		2DA3B01823EE7E1300091F62 /* RandomUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B01423EE7E1300091F62 /* RandomUserDetailView.swift */; };
 		2DA3B01923EE7E1300091F62 /* RandomUserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B01523EE7E1300091F62 /* RandomUserDetailViewModel.swift */; };
 		2DA3B01A23EE7E1300091F62 /* RandomUserDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA3B01623EE7E1300091F62 /* RandomUserDetailView.xib */; };
+		2DA3B01D23EE844C00091F62 /* RandomUserListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B01C23EE844C00091F62 /* RandomUserListViewData.swift */; };
 		2DB0D95D23EDFC7800007BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95C23EDFC7800007BED /* AppDelegate.swift */; };
 		2DB0D95F23EDFC7800007BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */; };
 		2DB0D96123EDFC7800007BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0D96023EDFC7800007BED /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		2DA3B01423EE7E1300091F62 /* RandomUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailView.swift; sourceTree = "<group>"; };
 		2DA3B01523EE7E1300091F62 /* RandomUserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailViewModel.swift; sourceTree = "<group>"; };
 		2DA3B01623EE7E1300091F62 /* RandomUserDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomUserDetailView.xib; sourceTree = "<group>"; };
+		2DA3B01C23EE844C00091F62 /* RandomUserListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserListViewData.swift; sourceTree = "<group>"; };
 		2DB0D95923EDFC7800007BED /* adevinta-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adevinta-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB0D95C23EDFC7800007BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DB0D95E23EDFC7800007BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		2DA3AFFD23EE6E5000091F62 /* RandomUsersList */ = {
 			isa = PBXGroup;
 			children = (
+				2DA3B01B23EE843000091F62 /* ViewData */,
 				2DA3B00623EE6FE600091F62 /* View */,
 				2DA3AFFE23EE6E8300091F62 /* RandomUsersListViewController.swift */,
 				2DA3AFFF23EE6E8300091F62 /* RandomUsersListView.swift */,
@@ -232,6 +235,14 @@
 				2DA3B01623EE7E1300091F62 /* RandomUserDetailView.xib */,
 			);
 			path = RandomUserDetail;
+			sourceTree = "<group>";
+		};
+		2DA3B01B23EE843000091F62 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				2DA3B01C23EE844C00091F62 /* RandomUserListViewData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 		2DB0D95023EDFC7800007BED = {
@@ -605,6 +616,7 @@
 				2DB0D99D23EE529000007BED /* RandomUser.swift in Sources */,
 				2DB0D99223EE024B00007BED /* RandomUsers.swift in Sources */,
 				2DB0D96123EDFC7800007BED /* ViewController.swift in Sources */,
+				2DA3B01D23EE844C00091F62 /* RandomUserListViewData.swift in Sources */,
 				2DB0D9B523EE537600007BED /* Location.swift in Sources */,
 				2DB0D95D23EDFC7800007BED /* AppDelegate.swift in Sources */,
 				2DB0D9A523EE52E100007BED /* Pictures.swift in Sources */,
