@@ -10,6 +10,10 @@ struct RandomUsersResponse: Codable {
     func toRandomUsers() -> RandomUsers {
         return RandomUsers(users: randomUsers.compactMap{ $0.toRandomUser() })
     }
+    
+    init(randomUsers: RandomUsers) {
+        self.randomUsers = randomUsers.users.map{ RandomUserResponse(randomUser: $0) }
+    }
 }
 
 struct RandomUserResponse: Codable {
@@ -55,5 +59,20 @@ struct RandomUserResponse: Codable {
                           id: id.toNameValue(),
                           picture: picture.toPictures(),
                           nationality: nationality)
+    }
+    
+    init(randomUser: RandomUser) {
+        self.gender = randomUser.gender.rawValue
+        self.name = NameResponse(name: randomUser.name)
+        self.location = LocationResponse(location: randomUser.location)
+        self.email = randomUser.email
+        self.login = LoginResponse(login: randomUser.login)
+        self.dateOfBirth = UserDateResponse(userDate: randomUser.dateOfBirth)
+        self.dateOfRegistration = UserDateResponse(userDate: randomUser.dateOfRegistration)
+        self.phone = randomUser.phone
+        self.cell = randomUser.cell
+        self.id = NameValueResponse(nameValue: randomUser.id)
+        self.picture = PicturesResponse(pictures: randomUser.picture)
+        self.nationality = randomUser.nationality
     }
 }

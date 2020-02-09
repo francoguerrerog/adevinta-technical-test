@@ -8,4 +8,9 @@ struct CoordinateResponse: Codable {
         return Coordinate(latitude: latitude,
                           longitude: longitude)
     }
+    
+    init(coordinates: Coordinate) {
+        self.latitude = coordinates.latitude
+        self.longitude = coordinates.longitude
+    }
 }

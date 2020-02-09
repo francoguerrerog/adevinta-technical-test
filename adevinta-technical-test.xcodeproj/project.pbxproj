@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D300BB923F0BB7600E14CDA /* RandomUserDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D300BB823F0BB7600E14CDA /* RandomUserDetailViewData.swift */; };
+		2D300BBB23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D300BBA23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift */; };
+		2D300BBD23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D300BBC23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift */; };
 		2D888C0223EF15630052632F /* RemoveRandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0123EF15630052632F /* RemoveRandomUser.swift */; };
 		2D888C0423EF1BEC0052632F /* RemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0323EF1BEC0052632F /* RemovedRandomUsersRepository.swift */; };
 		2D888C0623EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */; };
@@ -79,6 +82,9 @@
 
 /* Begin PBXFileReference section */
 		1974A0A5B63358C007BCEA45 /* Pods_adevinta_technical_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adevinta_technical_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D300BB823F0BB7600E14CDA /* RandomUserDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailViewData.swift; sourceTree = "<group>"; };
+		2D300BBA23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRandomUsersRespository.swift; sourceTree = "<group>"; };
+		2D300BBC23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
 		2D888C0123EF15630052632F /* RemoveRandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRandomUser.swift; sourceTree = "<group>"; };
 		2D888C0323EF1BEC0052632F /* RemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
 		2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
@@ -166,6 +172,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D300BB723F0B0E700E14CDA /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				2D300BB823F0BB7600E14CDA /* RandomUserDetailViewData.swift */,
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
 		2DA3AFEB23EE61F300091F62 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +194,8 @@
 			children = (
 				2DA3AFEF23EE625200091F62 /* InMemoryRandomUsersRespository.swift */,
 				2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */,
+				2D300BBA23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift */,
+				2D300BBC23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -243,6 +259,7 @@
 		2DA3B01223EE7DEE00091F62 /* RandomUserDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2D300BB723F0B0E700E14CDA /* ViewData */,
 				2DA3B01323EE7E1300091F62 /* RandomUserDetailViewController.swift */,
 				2DA3B01423EE7E1300091F62 /* RandomUserDetailView.swift */,
 				2DA3B01523EE7E1300091F62 /* RandomUserDetailViewModel.swift */,
@@ -619,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB0D99823EE036800007BED /* ApiError.swift in Sources */,
+				2D300BB923F0BB7600E14CDA /* RandomUserDetailViewData.swift in Sources */,
 				2DA3B01923EE7E1300091F62 /* RandomUserDetailViewModel.swift in Sources */,
 				2DA3B01023EE7AF600091F62 /* UIImageView+Load.swift in Sources */,
 				2DB0D9A923EE530300007BED /* NameValue.swift in Sources */,
@@ -646,7 +664,9 @@
 				2DA3B00223EE6E8300091F62 /* RandomUsersListViewController.swift in Sources */,
 				2DB0D99F23EE52AC00007BED /* NameResponse.swift in Sources */,
 				2DB0D9B923EE539500007BED /* Street.swift in Sources */,
+				2D300BBD23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift in Sources */,
 				2DB0D9B323EE536100007BED /* LocationResponse.swift in Sources */,
+				2D300BBB23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift in Sources */,
 				2DB0D9B123EE534600007BED /* Login.swift in Sources */,
 				2DB0D98E23EE01EF00007BED /* RandomUsersService.swift in Sources */,
 				2D888C0423EF1BEC0052632F /* RemovedRandomUsersRepository.swift in Sources */,

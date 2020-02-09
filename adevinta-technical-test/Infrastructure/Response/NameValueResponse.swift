@@ -8,4 +8,9 @@ struct NameValueResponse: Codable {
         return NameValue(name: name,
                          value: value)
     }
+    
+    init(nameValue: NameValue) {
+        self.name = nameValue.name
+        self.value = nameValue.value
+    }
 }

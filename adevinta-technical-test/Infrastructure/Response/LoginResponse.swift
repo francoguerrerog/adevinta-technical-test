@@ -18,4 +18,14 @@ struct LoginResponse: Codable {
                      sha1: sha1,
                      sha256: sha256)
     }
+    
+    init(login: Login) {
+        self.uuid = login.uuid
+        self.username = login.username
+        self.password = login.password
+        self.salt = login.salt
+        self.md5 = login.md5
+        self.sha1 = login.sha1
+        self.sha256 = login.sha256
+    }
 }

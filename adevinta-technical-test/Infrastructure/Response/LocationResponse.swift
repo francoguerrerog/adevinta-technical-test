@@ -33,4 +33,14 @@ struct LocationResponse: Codable {
                         coordinates: coordinates.toCoordinate(),
                         timezone: timezone.toUserTimeZone())
     }
+    
+    init(location: Location) {
+        self.street = StreetResponse(street: location.street)
+        self.city = location.city
+        self.state = location.state
+        self.country = location.country
+        self.postcode = location.postcode
+        self.coordinates = CoordinateResponse(coordinates: location.coordinates)
+        self.timezone = UserTimeZoneResponse(timeZone: location.timezone)
+    }
 }

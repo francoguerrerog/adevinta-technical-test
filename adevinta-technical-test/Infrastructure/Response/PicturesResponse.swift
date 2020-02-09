@@ -10,4 +10,10 @@ struct PicturesResponse: Codable {
                         medium: medium,
                         thumbnail: thumbnail)
     }
+    
+    init(pictures: Pictures) {
+        self.large = pictures.large
+        self.medium = pictures.medium
+        self.thumbnail = pictures.thumbnail
+    }
 }

@@ -8,4 +8,9 @@ struct StreetResponse: Codable {
         return Street(number: number,
                       name: name)
     }
+    
+    init(street: Street) {
+        self.number = street.number
+        self.name = street.name
+    }
 }

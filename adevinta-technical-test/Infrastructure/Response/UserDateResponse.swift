@@ -8,4 +8,9 @@ struct UserDateResponse: Codable {
         return UserDate(date: date,
                         age: age)
     }
+    
+    init(userDate: UserDate) {
+        self.date = userDate.date
+        self.age = userDate.age
+    }
 }

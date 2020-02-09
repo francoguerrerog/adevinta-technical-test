@@ -4,11 +4,11 @@ import RxSwift
 class RandomUserDetailViewModel {
     
     struct Output {
-        let randomUser: Observable<RandomUser>
+        let randomUser: Observable<RandomUserDetailViewData>
     }
     public lazy var output = Output(randomUser: randomUserSubject.asObservable())
     
-    private let randomUserSubject = PublishSubject<RandomUser>()
+    private let randomUserSubject = PublishSubject<RandomUserDetailViewData>()
     
     private let randomUser: RandomUser
     
@@ -17,7 +17,25 @@ class RandomUserDetailViewModel {
     }
     
     private func emitRandomUser() {
-        randomUserSubject.onNext(randomUser)
+        
+        let randomUserDetailViewData = toRandomUserDetailViewData(randomUser)
+        randomUserSubject.onNext(randomUserDetailViewData)
+    }
+    
+    private func toRandomUserDetailViewData(_ randomUser: RandomUser) -> RandomUserDetailViewData {
+        
+        let name = "\(randomUser.name.title) \(randomUser.name.first) \(randomUser.name.last)"
+        let location = "\(randomUser.location.street.number) \(randomUser.location.street.name) \(randomUser.location.city) \(randomUser.location.state)"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd,yyyy"
+        let registrationDate = "\(dateFormatter.string(from: randomUser.dateOfRegistration.date))"
+        
+        return RandomUserDetailViewData(gender: randomUser.gender.rawValue,
+                                        name: name,
+                                        location: location,
+                                        registrationDate: registrationDate,
+                                        email: randomUser.email,
+                                        picture: randomUser.picture.large)
     }
 }
 

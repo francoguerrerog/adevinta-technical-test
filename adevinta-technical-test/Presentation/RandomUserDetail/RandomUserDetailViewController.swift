@@ -33,8 +33,20 @@ class RandomUserDetailViewController: UIViewController {
     private func bindRandomUser() {
         viewModel.output.randomUser
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { randomUser in
-                print(randomUser)
+            .subscribe(onNext: { [weak self] randomUser in
+                self?.setupRandomUser(randomUser)
             }).disposed(by: disposeBag)
+    }
+    
+    private func setupRandomUser(_ randomUser: RandomUserDetailViewData) {
+        if let url = URL(string: randomUser.picture) {
+            mainView.pictureImage.load(url: url)
+        }
+        mainView.genderLabel.text = randomUser.gender.lowercased()
+        mainView.nameLabel.text = randomUser.name
+        mainView.locationLabel.text = randomUser.location
+        mainView.regitrationDateLabel.text = randomUser.registrationDate
+        mainView.emailLabel.text = randomUser.email
+        
     }
 }

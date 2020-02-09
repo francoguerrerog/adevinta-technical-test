@@ -8,4 +8,9 @@ struct UserTimeZoneResponse: Codable {
         return UserTimeZone(offset: offset,
                             description: description)
     }
+    
+    init(timeZone: UserTimeZone) {
+        self.offset = timeZone.offset
+        self.description = timeZone.description
+    }
 }
