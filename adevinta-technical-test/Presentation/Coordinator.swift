@@ -6,8 +6,8 @@ protocol Coordinator {
 }
 
 class CoordinatorDefault {
+    
     private let window: UIWindow
-
     private var viewNavigation: UINavigationController?
     
     init(window: UIWindow) {
@@ -45,6 +45,7 @@ class CoordinatorDefault {
 }
 
 extension CoordinatorDefault: Coordinator {
+    
     func goToRandomUserDetail(_ randomUser: RandomUser) {
         
         let viewController = createRandomUserDetailViewController(randomUser)

@@ -27,10 +27,12 @@ class RandomUserDetailViewController: UIViewController {
     }
 
     private func bindViewModel() {
+        
         bindRandomUser()
     }
     
     private func bindRandomUser() {
+        
         viewModel.output.randomUser
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] randomUser in
@@ -39,6 +41,7 @@ class RandomUserDetailViewController: UIViewController {
     }
     
     private func setupRandomUser(_ randomUser: RandomUserDetailViewData) {
+        
         if let url = URL(string: randomUser.picture) {
             mainView.pictureImage.load(url: url)
         }

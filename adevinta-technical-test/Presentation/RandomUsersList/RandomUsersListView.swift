@@ -1,8 +1,7 @@
-
 import UIKit
 
 class RandomUsersListView: UIView {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     

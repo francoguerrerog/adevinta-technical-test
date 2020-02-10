@@ -49,6 +49,7 @@ class RandomUsersListViewController: UIViewController {
     }
     
     private func setupSearchController() {
+        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Filter..."
@@ -92,27 +93,10 @@ class RandomUsersListViewController: UIViewController {
         if let url = URL(string: item.picture) {
             cell.itemImage.load(url: url)
         }
-        
-        bindRemoveAction(cell)
-        bindOpenAction(cell)
-        
-    }
-    
-    private func bindRemoveAction(_ cell: ItemCellView) {
-        cell.removeButton.rx.tap
-            .bind { [weak self] _ in
-                self?.viewModel.selectRemoveCell(at: cell.tag)
-        }.disposed(by: cell.disposeBag)
-    }
-    
-    private func bindOpenAction(_ cell: ItemCellView) {
-        cell.openButton.rx.tap
-            .bind { [weak self] _ in
-                self?.viewModel.selectOpenCell(at: cell.tag)
-        }.disposed(by: cell.disposeBag)
     }
     
     private func bindFilterTyping() {
+        
         filterTypingSubject
             .asObservable()
             .debounce(.milliseconds(800), scheduler: MainScheduler.asyncInstance)
@@ -129,6 +113,11 @@ extension RandomUsersListViewController: UITableViewDelegate {
         return 100.0
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        viewModel.selectOpenCell(at: indexPath.row)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let height = scrollView.frame.size.height
@@ -137,6 +126,16 @@ extension RandomUsersListViewController: UITableViewDelegate {
         if distanceFromBottom < height && !isLoading {
             viewModel.scrollToBottom()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let contextItem = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
+            self.viewModel.selectRemoveCell(at: indexPath.row)
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
+
+        return swipeActions
     }
 }
 

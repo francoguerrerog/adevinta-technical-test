@@ -10,6 +10,7 @@
 		2D300BB923F0BB7600E14CDA /* RandomUserDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D300BB823F0BB7600E14CDA /* RandomUserDetailViewData.swift */; };
 		2D300BBB23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D300BBA23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift */; };
 		2D300BBD23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D300BBC23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift */; };
+		2D300BBF23F0CEEA00E14CDA /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D300BBE23F0CEEA00E14CDA /* UIView+CornerRadius.swift */; };
 		2D888C0223EF15630052632F /* RemoveRandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0123EF15630052632F /* RemoveRandomUser.swift */; };
 		2D888C0423EF1BEC0052632F /* RemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0323EF1BEC0052632F /* RemovedRandomUsersRepository.swift */; };
 		2D888C0623EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */; };
@@ -85,6 +86,7 @@
 		2D300BB823F0BB7600E14CDA /* RandomUserDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserDetailViewData.swift; sourceTree = "<group>"; };
 		2D300BBA23F0C9E600E14CDA /* UserDefaultsRandomUsersRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRandomUsersRespository.swift; sourceTree = "<group>"; };
 		2D300BBC23F0CAA800E14CDA /* UserDefaultsRemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
+		2D300BBE23F0CEEA00E14CDA /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		2D888C0123EF15630052632F /* RemoveRandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRandomUser.swift; sourceTree = "<group>"; };
 		2D888C0323EF1BEC0052632F /* RemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
 		2D888C0523EF1DDE0052632F /* InMemoryRemovedRandomUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRemovedRandomUsersRepository.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA3B00F23EE7AF600091F62 /* UIImageView+Load.swift */,
+				2D300BBE23F0CEEA00E14CDA /* UIView+CornerRadius.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				2D888C0223EF15630052632F /* RemoveRandomUser.swift in Sources */,
 				2DB0D99523EE026A00007BED /* ApiRandomUsersService.swift in Sources */,
 				2DA3B01723EE7E1300091F62 /* RandomUserDetailViewController.swift in Sources */,
+				2D300BBF23F0CEEA00E14CDA /* UIView+CornerRadius.swift in Sources */,
 				2DB0D9C423EE559400007BED /* FindRandomUsers.swift in Sources */,
 				2DA3B00423EE6E8300091F62 /* RandomUsersListViewModel.swift in Sources */,
 				2DB0D9AD23EE532500007BED /* UserDate.swift in Sources */,

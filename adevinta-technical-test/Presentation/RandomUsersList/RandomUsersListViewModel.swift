@@ -21,7 +21,7 @@ class RandomUsersListViewModel {
     private var randomUsers: [RandomUser] = []
     
     private let disposeBag = DisposeBag()
-
+    
     init(_ coordinator: Coordinator,
          _ findRandomUsers: FindRandomUsers,
          _ removeRandomUser: RemoveRandomUser) {
@@ -38,8 +38,8 @@ class RandomUsersListViewModel {
                 self?.loadingSubject.onNext(false)
                 self?.saveCurrentRandomUsers(randomUsers.users)
                 self?.emitRandomUsers(randomUsers.users)
-            }, onError: { [weak self] _ in
-                self?.loadingSubject.onNext(false)
+                }, onError: { [weak self] _ in
+                    self?.loadingSubject.onNext(false)
             }).disposed(by: disposeBag)
     }
     
@@ -90,6 +90,7 @@ class RandomUsersListViewModel {
 }
 
 extension RandomUsersListViewModel {
+    s
     func viewDidLoad() {
         
         findNewRandomUsers()
